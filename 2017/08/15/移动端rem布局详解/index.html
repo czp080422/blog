@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="1. rem是什么 rem（font size of the root element）是指相对于根元素的字体大小的单位。简单的说它就是一个相对单位。rem计算的规则是依赖根元素。   2. 基本写法如下面定于的html的节点 12345678html &amp;#123;    font-size: 10px;&amp;#125;.sonDom &amp;#123;    width: 6rem; //相当于6*10=">
+<meta property="og:type" content="article">
+<meta property="og:title" content="移动端rem布局详解">
+<meta property="og:url" content="http://qianmucheng.cn/2017/08/15/移动端rem布局详解/index.html">
+<meta property="og:site_name" content="千木呈">
+<meta property="og:description" content="1. rem是什么 rem（font size of the root element）是指相对于根元素的字体大小的单位。简单的说它就是一个相对单位。rem计算的规则是依赖根元素。   2. 基本写法如下面定于的html的节点 12345678html &amp;#123;    font-size: 10px;&amp;#125;.sonDom &amp;#123;    width: 6rem; //相当于6*10=">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://7tszky.com1.z0.glb.clouddn.com/FjkuDS8oQb1ayRLMaciFCZWtViHH">
+<meta property="og:updated_time" content="2017-08-15T14:32:45.486Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="移动端rem布局详解">
+<meta name="twitter:description" content="1. rem是什么 rem（font size of the root element）是指相对于根元素的字体大小的单位。简单的说它就是一个相对单位。rem计算的规则是依赖根元素。   2. 基本写法如下面定于的html的节点 12345678html &amp;#123;    font-size: 10px;&amp;#125;.sonDom &amp;#123;    width: 6rem; //相当于6*10=">
+<meta name="twitter:image" content="http://7tszky.com1.z0.glb.clouddn.com/FjkuDS8oQb1ayRLMaciFCZWtViHH">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://qianmucheng.cn/2017/08/15/移动端rem布局详解/"/>
+
+
+
+
+
+  <title>移动端rem布局详解 | 千木呈</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">千木呈</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://qianmucheng.cn/2017/08/15/移动端rem布局详解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="千木呈">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="千木呈">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">移动端rem布局详解</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T22:16:31+08:00">
+                2017-08-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="1-rem是什么"><a href="#1-rem是什么" class="headerlink" title="1. rem是什么"></a>1. rem是什么</h4><blockquote>
+<p>rem（font size of the root element）是指相对于根元素的字体大小的单位。简单的说它就是一个相对单位。rem计算的规则是依赖根元素。</p>
+</blockquote>
+<hr>
+<h4 id="2-基本写法"><a href="#2-基本写法" class="headerlink" title="2. 基本写法"></a>2. 基本写法</h4><p>如下面定于的html的节点</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">html</span> &#123;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">10px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.sonDom</span> &#123;</div><div class="line">    width: 6rem; //相当于6*10=60px</div><div class="line">    height: 3rem; //相当于3*10=30px</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>通过上面分析，我们可以得出<strong>可以通过</strong>改变html的font-size的值而等比改变所有用了rem单位的元素，而这个正是rem实现完美的分辨率适配的原理。</p>
+<hr>
+<h4 id="3-如何动态更改根元素font-size的值"><a href="#3-如何动态更改根元素font-size的值" class="headerlink" title="3. 如何动态更改根元素font-size的值"></a>3. 如何动态更改根元素font-size的值</h4><p>为了实现分辨率适配，我们需要用根据屏幕的大小动态去计算根元素的font-size的值，目前普遍的有两种方法：</p>
+<h6 id="1、通过媒体查询的方式，能够满足大部分场景，只需要把常用的屏宽度考虑进去即可"><a href="#1、通过媒体查询的方式，能够满足大部分场景，只需要把常用的屏宽度考虑进去即可" class="headerlink" title="1、通过媒体查询的方式，能够满足大部分场景，只需要把常用的屏宽度考虑进去即可"></a>1、通过媒体查询的方式，能够满足大部分场景，只需要把常用的屏宽度考虑进去即可</h6><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*默认为20px*/</span></div><div class="line"> <span class="selector-tag">html</span> &#123;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">20px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/*根据宽度设置不同的html font-size值去覆盖默认值*/</span></div><div class="line">@<span class="keyword">media</span> only screen and (min-width: <span class="number">320px</span>;)&#123;</div><div class="line">    html &#123;</div><div class="line">      <span class="selector-tag">font-size</span>: 10<span class="selector-tag">px</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@<span class="keyword">media</span> only screen and (min-width: <span class="number">375px</span>;)&#123;</div><div class="line">    html &#123;</div><div class="line">      <span class="selector-tag">font-size</span>: 16<span class="selector-tag">px</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@<span class="keyword">media</span> only screen and (min-width: <span class="number">414px</span>;)&#123;</div><div class="line">    html &#123;</div><div class="line">      <span class="selector-tag">font-size</span>: 20<span class="selector-tag">px</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h6 id="2、通过js设置"><a href="#2、通过js设置" class="headerlink" title="2、通过js设置"></a>2、通过js设置</h6><p>如果希望把所有屏幕大小给考虑进去，可以考虑使用js来计算，如下面的代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> doc = <span class="built_in">document</span>, </div><div class="line">    win = <span class="built_in">window</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">initFontSize</span> (<span class="params"></span>) </span>&#123;</div><div class="line">     <span class="keyword">var</span> docEl = doc.documentElement,</div><div class="line">         resizeEvt = <span class="string">'orientationchange'</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">'orientationchange'</span> : <span class="string">'resize'</span>,</div><div class="line">         recalc = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">             <span class="keyword">var</span> clientWidth = docEl.clientWidth; <span class="comment">//window.innerWidth;</span></div><div class="line">             <span class="keyword">if</span>(!clientWidth) <span class="keyword">return</span>;</div><div class="line">             fontSizeRate = (clientWidth / <span class="number">375</span>)</div><div class="line">             <span class="keyword">var</span> baseFontSize = <span class="number">15</span> * fontSizeRate;</div><div class="line">             docEl.style.fontSize = baseFontSize + <span class="string">'px'</span>;</div><div class="line">         &#125;;</div><div class="line">     recalc();</div><div class="line">     <span class="keyword">if</span>(!doc.addEventListener) <span class="keyword">return</span>;</div><div class="line">     win.addEventListener(resizeEvt, recalc, <span class="literal">false</span>);</div><div class="line">     doc.addEventListener(<span class="string">'DOMContentLoaded'</span>, recalc, <span class="literal">false</span>);  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<h4 id="4-rem换算"><a href="#4-rem换算" class="headerlink" title="4. rem换算"></a>4. rem换算</h4><p>我们在开发的时候，往往不希望涉及到rem的换算，如一个设计稿按钮是120px，如果我们根节点font-size是14px，计算 120/14=8.571rem。感觉还是挺麻烦得，而这些工作是可以通过sass等预处理器或者构建去完成。</p>
+<p>如下面翔神写的fis插件<br><a href="https://github.com/imweb/fis-parser-rem" target="_blank" rel="external">https://github.com/imweb/fis-parser-rem</a></p>
+<hr>
+<h4 id="5-效果图"><a href="#5-效果图" class="headerlink" title="5. 效果图"></a>5. 效果图</h4><p><img src="http://7tszky.com1.z0.glb.clouddn.com/FjkuDS8oQb1ayRLMaciFCZWtViHH" alt="效果图"></p>
+<hr>
+<h4 id="6-rem需注意点"><a href="#6-rem需注意点" class="headerlink" title="6.rem需注意点"></a>6.rem需注意点</h4><p>在移动端使用rem的话，兼容性是没问题的，但还是存在着一些需要注意的地方：</p>
+<h6 id="1、小数数值处理"><a href="#1、小数数值处理" class="headerlink" title="1、小数数值处理"></a>1、小数数值处理</h6><p>不同浏览器计算rem转换为px数值时，对于小数点后的数值的处理是有所偏差，rem计算偏差的根源是浏览器内核数字类型的区别，如果浏览器的内核数字类型是float类型，能够较好地支持有小数点的数值。当浏览器内核数字类型是int类型，不支持小数点，会对数字进行四舍五入，这样就会有偏差。如果元素越大偏差得就越明显！</p>
+<h6 id="2、雪碧图rem"><a href="#2、雪碧图rem" class="headerlink" title="2、雪碧图rem"></a>2、雪碧图rem</h6><p>使用rem的同时又涉及到雪碧图时，由上面我们可以得知，rem的换算成px的尺寸非严格精确尺寸，如果雪碧图如果图标之间的距离过小，就可能导致图标过界，因此图与图之间的间隙需要留相应大一点。</p>
+<h6 id="3、单纯的rem没解决高度适配的问题"><a href="#3、单纯的rem没解决高度适配的问题" class="headerlink" title="3、单纯的rem没解决高度适配的问题"></a>3、单纯的rem没解决高度适配的问题</h6><p>单纯的rem没解决高度适配的问题，当然目前也没有特别多高度适配的场景，因此建议如果需要在使用rem基础上还做相应的高度适配，就要通过相应的js去辅助啦。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/15/跨域问题总结/" rel="prev" title="跨域问题总结">
+                跨域问题总结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="千木呈" />
+          <p class="site-author-name" itemprop="name">千木呈</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/qianmucheng" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://segmentfault.com/u/qianmucheng" target="_blank" title="segmentfault">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      segmentfault
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://juejin.im/user/58b8d038ac502e006bd88ac4" target="_blank" title="掘金">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      掘金
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">千木呈</span>
+
+  
+</div>
+
+
+  <div class="powered-by">
+    由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+  </div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">
+    主题 &mdash;
+    <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+      NexT.Mist
+    </a>
+  </div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
