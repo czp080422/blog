@@ -202,12 +202,32 @@
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/blog/archives/" rel="section">
+        <li class="menu-item menu-item-categories">
+          <a href="/blog/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-timeline">
+          <a href="/blog/archives" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            归档
+            时间轴
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/blog/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
           </a>
         </li>
       
@@ -254,7 +274,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qianmucheng.cn/blog/2017/08/15/js常用实例的实现/">
+    <link itemprop="mainEntityOfPage" href="http://qianmucheng.cn/blog/2017/06/08/土巴兔/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="千木呈">
@@ -273,7 +293,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2017/08/15/js常用实例的实现/" itemprop="url">js常用实例实现</a></h1>
+                <a class="post-title-link" href="/blog/2017/06/08/土巴兔/" itemprop="url">土巴兔</a></h1>
         
 
         <div class="post-meta">
@@ -285,8 +305,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T22:22:43+08:00">
-                2017-08-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-08T00:00:00+08:00">
+                2017-06-08
               </time>
             
 
@@ -295,6 +315,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/其他/" itemprop="url" rel="index">
+                    <span itemprop="name">其他</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -324,13 +366,16 @@
 
       
         
-          
-            <h4 id="1-字符串操作"><a href="#1-字符串操作" class="headerlink" title="1. 字符串操作"></a>1. 字符串操作</h4><h5 id="1-1-去除字符串空格"><a href="#1-1-去除字符串空格" class="headerlink" title="1-1 去除字符串空格"></a>1-1 去除字符串空格</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//去除空格 type 1-所有空格  2-前后空格  3-前空格  4-后空格</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">trim</span>(<span class="params">str, type</span>) </span>&#123;</div><div class="line">    <span class="keyword">switch</span> (type) &#123;</div><div class="line">        <span class="keyword">case</span> <span class="number">1</span>: <span class="keyword">return</span> str.replace(<span class="regexp">/\s+/g</span>, <span class="string">""</span>);</div><div class="line">        <span class="keyword">case</span> <span class="number">2</span>: <span class="keyword">return</span> str.replace(<span class="regexp">/(^\s*)|(\s*$)/g</span>, <span class="string">""</span>);</div><div class="line">        <span class="keyword">case</span> <span class="number">3</span>: <span class="keyword">return</span> str.replace(<span class="regexp">/(^\s*)/g</span>, <span class="string">""</span>);</div><div class="line">        <span class="keyword">case</span> <span class="number">4</span>: <span class="keyword">return</span> str.replace(<span class="regexp">/(\s*$)/g</span>, <span class="string">""</span>);</div><div class="line">        <span class="keyword">default</span>: <span class="keyword">return</span> str;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h5 id="1-2-字母大小写切换"><a href="#1-2-字母大小写切换" class="headerlink" title="1-2 字母大小写切换"></a>1-2 字母大小写切换</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//checkPwd('12asdASAD')</span></div><div class="line"><span class="comment">//3(强度等级为3)</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkPwd</span>(<span class="params">str</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> nowLv = <span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span> (str.length &lt; <span class="number">6</span>) &#123;</div><div class="line">        <span class="keyword">return</span> nowLv</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">if</span> (<span class="regexp">/[0-9]/</span>.test(str)) &#123;</div><div class="line">        nowLv++</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">if</span> (<span class="regexp">/[a-z]/</span>.test(str)) &#123;</div><div class="line">        nowLv++</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">if</span> (<span class="regexp">/[A-Z]/</span>.test(str)) &#123;</div><div class="line">        nowLv++</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">if</span> (<span class="regexp">/[\.|-|_]/</span>.test(str)) &#123;</div><div class="line">        nowLv++</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> nowLv;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h5 id="1-3-查找字符串出现的次数"><a href="#1-3-查找字符串出现的次数" class="headerlink" title="1-3 查找字符串出现的次数"></a>1-3 查找字符串出现的次数</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">/* var strTest=&apos;sad44654blog5a1sd67as9dablog4s5d16zxc4sdweasjkblogwqepaskdkblogahseiuadbhjcibloguyeajzxkcabloguyiwezxc967&apos;</div><div class="line">* countStr(strTest,&apos;blog&apos;)</div><div class="line">* 6</div><div class="line">*/</div><div class="line">function countStr (str,strSplit)&#123;</div><div class="line">    return str.split(strSplit).length-1</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h5 id="1-4-数组去重"><a href="#1-4-数组去重" class="headerlink" title="1-4 数组去重"></a>1-4 数组去重</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">//ES6新增的Set数据结构，类似于数组，但是里面的元素都是唯一的 ，其构造函数可以接受一个数组作为参数</div><div class="line">//let arr=[1,2,1,2,6,3,5,69,66,7,2,1,4,3,6,8,9663,8]</div><div class="line">//let set = new Set(array);</div><div class="line">//&#123;1,2,6,3,5,69,66,7,4,8,9663&#125;</div><div class="line">//ES6中Array新增了一个静态方法from，可以把类似数组的对象转换为数组</div><div class="line">//Array.from(set)</div><div class="line">//[1,2,6,3,5,69,66,7,4,8,9663]</div><div class="line">方法一：</div><div class="line">function removeRepeatArray(arr)&#123;</div><div class="line">    return Array.from(new Set(arr))</div><div class="line">&#125;</div><div class="line"></div><div class="line">方法二：</div><div class="line">function removeRepeatArray(arr) &#123;</div><div class="line">    var r = [];</div><div class="line">    for(var i=0,len=arr.length; i&lt;len; i++)&#123;</div><div class="line">        if(r.indexOf(arr[i])===-1)&#123;</div><div class="line">            r.push(arr[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return r;</div><div class="line">&#125;</div><div class="line"></div><div class="line">方法三：</div><div class="line">function removeRepeatArray(arr) &#123;</div><div class="line">    var r = arr.filter(function(item,index,self)&#123;</div><div class="line">        return self.indexOf(item) == index;</div><div class="line">    &#125;);</div><div class="line">    return r;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-          
+          <blockquote>
+<p> 我认为创业开始后不久就要有收入，有收入就表明了对客户是有价值的，有人愿意付钱给你买单。虽然开始收入不会多，但是它是有用户价值和商业价值的。因为有人愿意为你买单，是商业成功的根本。—王国彬</p>
+</blockquote>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/blog/2017/06/08/土巴兔/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -377,7 +422,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qianmucheng.cn/blog/2017/08/15/git常用命令/">
+    <link itemprop="mainEntityOfPage" href="http://qianmucheng.cn/blog/2017/05/27/住范儿/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="千木呈">
@@ -396,7 +441,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2017/08/15/git常用命令/" itemprop="url">git常用命令</a></h1>
+                <a class="post-title-link" href="/blog/2017/05/27/住范儿/" itemprop="url">住范儿</a></h1>
         
 
         <div class="post-meta">
@@ -408,8 +453,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T22:22:35+08:00">
-                2017-08-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-27T00:00:00+08:00">
+                2017-05-27
               </time>
             
 
@@ -418,6 +463,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/其他/" itemprop="url" rel="index">
+                    <span itemprop="name">其他</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -447,32 +514,961 @@
 
       
         
+          <p>住范儿是由四位清华大学毕业工科男创立，他们之所以拒绝波士顿咨询公司等高薪Offer，而选择“土到渣”的家装行业，在住范儿CEO刘羡然看来，一方面，<strong>家装行业流程长、痛点多、缺乏头部品牌，整体行业和管理水平低下，服务水平有很大提升空间；另一方面，无法很好地满足年轻用户群体个性化的家装需求</strong>。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/blog/2017/05/27/住范儿/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://qianmucheng.cn/blog/2017/05/05/XSS攻击总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="千木呈">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="千木呈">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2017/05/05/XSS攻击总结/" itemprop="url">XSS攻击总结</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-05T00:00:00+08:00">
+                2017-05-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-            <h4 id="git提交代码基本流程"><a href="#git提交代码基本流程" class="headerlink" title="git提交代码基本流程"></a>git提交代码基本流程</h4><p>第一步：把当前目录树种所有待提交代码添加到暂存区</p>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/前端开发/" itemprop="url" rel="index">
+                    <span itemprop="name">前端开发</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/前端开发/web安全/" itemprop="url" rel="index">
+                    <span itemprop="name">web安全</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="XSS的类型"><a href="#XSS的类型" class="headerlink" title="XSS的类型"></a>XSS的类型</h4><p>总体来讲，XSS分三类，存储型XSS、反射型XSS、DOM-XSS。</p>
+<h5 id="存储型XSS"><a href="#存储型XSS" class="headerlink" title="存储型XSS"></a>存储型XSS</h5><p>数据库中存有的存在XSS攻击的数据，返回给客户端。若数据未经过任何转义。被浏览器渲染，就可能导致XSS攻击。</p>
+<h3 id="反射型XSS"><a href="#反射型XSS" class="headerlink" title="反射型XSS"></a>反射型XSS</h3><p>将用户输入的存在XSS攻击的数据，发送给后台，后台并未对数据进行存储，也未经过任何过滤，直接返回给客户端，被浏览器渲染，就可能导致XSS攻击。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/blog/2017/05/05/XSS攻击总结/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://qianmucheng.cn/blog/2017/04/08/Gulp和Webpack/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="千木呈">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="千木呈">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2017/04/08/Gulp和Webpack/" itemprop="url">Gulp和Webpack介绍</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-08T00:00:00+08:00">
+                2017-04-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/前端开发/" itemprop="url" rel="index">
+                    <span itemprop="name">前端开发</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/前端开发/Javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">Javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="Gulp和Webpack是什么"><a href="#Gulp和Webpack是什么" class="headerlink" title="Gulp和Webpack是什么"></a>Gulp和Webpack是什么</h4><p>首先可以从gulp和webpack的官网找到对它们的描述：</p>
+<blockquote>
+<p>gulp: 用自动化构建工具增强你的工作流程</p>
+<p>Webpack: 当下最热门的前端资源模块化管理和打包工具</p>
+</blockquote>
+<p>它们都属于前端构建工具，但gulp是任务管理工具（task runner），webpack是模块化打包工具（module bundler）</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/blog/2017/04/08/Gulp和Webpack/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://qianmucheng.cn/blog/2017/03/22/AMD和CommonJS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="千木呈">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="千木呈">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2017/03/22/AMD和CommonJS/" itemprop="url">CommonJS、AMD、CMD规范</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-22T00:00:00+08:00">
+                2017-03-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/前端开发/" itemprop="url" rel="index">
+                    <span itemprop="name">前端开发</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/前端开发/Javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">Javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="CommonJS"><a href="#CommonJS" class="headerlink" title="CommonJS"></a>CommonJS</h4><p>2009年，美国程序员Ryan Dahl创造了nodejs项目，将javascript语言用于服务器端编程。<br><img src="http://image.beekka.com/blog/201210/bg2012103002.jpg" alt=""><br>这标志”javascript模块化编程”正式诞生。因为老实说，在浏览器环境下，没有模块也不是特别大的问题，毕竟网页程序的复杂性有限；但是在服务器端，一定要有模块，与操作系统和其他应用程序互动，否则根本没法编程。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/blog/2017/03/22/AMD和CommonJS/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://qianmucheng.cn/blog/2017/02/19/跨域问题总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="千木呈">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="千木呈">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2017/02/19/跨域问题总结/" itemprop="url">跨域问题总结</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-19T00:00:00+08:00">
+                2017-02-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/前端开发/" itemprop="url" rel="index">
+                    <span itemprop="name">前端开发</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/前端开发/浏览器/" itemprop="url" rel="index">
+                    <span itemprop="name">浏览器</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="什么是跨域？"><a href="#什么是跨域？" class="headerlink" title="什么是跨域？"></a>什么是跨域？</h4><p>同源策略是由Netscape提出的著名安全策略，是浏览器最核心、基本的安全功能,它限制了一个源(origin)中加载文本或者脚本与来自其他源(origin)中资源的交互方式，所谓的同源就是指协议、域名、端口相同。当浏览器执行一个脚本时会检查是否同源，只有同源的脚本才会执行，如果不同源即为跨域</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/blog/2017/02/19/跨域问题总结/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://qianmucheng.cn/blog/2017/01/12/移动端rem布局详解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="千木呈">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="千木呈">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2017/01/12/移动端rem布局详解/" itemprop="url">移动端rem布局详解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-01-12T00:00:00+08:00">
+                2017-01-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/前端开发/" itemprop="url" rel="index">
+                    <span itemprop="name">前端开发</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/前端开发/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="1-rem是什么"><a href="#1-rem是什么" class="headerlink" title="1. rem是什么"></a>1. rem是什么</h4><blockquote>
+<p>rem（font size of the root element）是指相对于根元素的字体大小的单位。简单的说它就是一个相对单位。rem计算的规则是依赖根元素。</p>
+</blockquote>
+<h2 id=""><a href="#" class="headerlink" title=""></a>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/blog/2017/01/12/移动端rem布局详解/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://qianmucheng.cn/blog/2016/11/16/git常用命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="千木呈">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="千木呈">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2016/11/16/git常用命令/" itemprop="url">git常用命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-11-16T00:00:00+08:00">
+                2016-11-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/常用工具/" itemprop="url" rel="index">
+                    <span itemprop="name">常用工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="git提交代码基本流程"><a href="#git提交代码基本流程" class="headerlink" title="git提交代码基本流程"></a>git提交代码基本流程</h4><p>第一步：把当前目录树种所有待提交代码添加到暂存区</p>
 <pre><code>$ git add .
 </code></pre><p>第二步：提交暂存区代码到本地仓库</p>
 <pre><code>$ git commit -m &quot;&lt;message&gt;&quot;
 </code></pre><p>第三步：push本地代码到远程仓库</p>
 <pre><code>$ git push
 </code></pre><hr>
-<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><p>全局配置用户信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config --global user.name &quot;Your Name&quot;</div><div class="line">$ git config --global user.email &quot;email@example.com&quot;</div></pre></td></tr></table></figure></p>
-<p>创建本地仓库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//在目标目录下执行</div><div class="line">$ git init</div></pre></td></tr></table></figure></p>
-<p>把文件放进git仓库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">/* step 1 把要提交的文件或目录添加到暂存区  </div><div class="line">*  &lt;path&gt; 可以是文件也可以是目录</div><div class="line">*  git add . 把当前目录所有修改过的文件添加到暂存区</div><div class="line">*/ </div><div class="line">$ git add &lt;path&gt; </div><div class="line">或者</div><div class="line">$ git add .</div><div class="line"></div><div class="line">step 2 提交代码到仓库中</div><div class="line">$ git commit -m &quot;&lt;message&gt;&quot;</div></pre></td></tr></table></figure>
-<p>查看仓库当前状态</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ git status</div><div class="line"></div><div class="line">//&lt;file&gt; 具体文件，此命令查看文件修改的内容</div><div class="line">$ git diff &lt;file&gt;</div></pre></td></tr></table></figure>
-<p>查看历史提交记录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git log</div><div class="line"></div><div class="line">$ git log --pretty=online</div></pre></td></tr></table></figure></p>
-<p>版本回退<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//回退到上一个版本</div><div class="line">$ git reset --hard HEAD~</div><div class="line"></div><div class="line">//回退到指定版本，&lt;commit_id&gt;可通过git log查找，不需要写全，一般写7位</div><div class="line">$ git reset --hard &lt;commit_id&gt;</div></pre></td></tr></table></figure></p>
-<p>查看所有操作命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git reflog</div></pre></td></tr></table></figure></p>
-<p>添加远程库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">step 1 关联本地库和远程库 ,远程git库地址修改成自己的就可以了</div><div class="line"></div><div class="line">$ git remote add origin &lt;git@github.com:qianmucheng/learngit.git&gt;</div><div class="line"></div><div class="line">step 2 把本地master分支代码提交到远程库</div><div class="line"></div><div class="line">$ git push origin master</div></pre></td></tr></table></figure></p>
-<p>从远程库clone代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git clone &lt;git@github.com:qianmucheng/learngit.git&gt;</div></pre></td></tr></table></figure></p>
-<p>创建分支<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch &lt;branch-name&gt;</div></pre></td></tr></table></figure></p>
-<p>切换分支<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout &lt;branch-name&gt;</div></pre></td></tr></table></figure></p>
-<p>查看切换<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//列出所有分支，当前分支前面会标一个*号</div><div class="line">$ git branch</div><div class="line">* master</div><div class="line">  dev</div></pre></td></tr></table></figure></p>
-<p>合并分支<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//合并指定分支到当前分支(当前分支为master)</div><div class="line">$ git merge &lt;branch-name&gt;</div></pre></td></tr></table></figure></p>
-<p>删除分支<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch -d &lt;branch-name&gt;</div></pre></td></tr></table></figure></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/blog/2016/11/16/git常用命令/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -519,7 +1515,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qianmucheng.cn/blog/2017/08/15/住范儿/">
+    <link itemprop="mainEntityOfPage" href="http://qianmucheng.cn/blog/2016/04/15/js常用实例的实现/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="千木呈">
@@ -538,7 +1534,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2017/08/15/住范儿/" itemprop="url">住范儿</a></h1>
+                <a class="post-title-link" href="/blog/2016/04/15/js常用实例的实现/" itemprop="url">js常用实例实现</a></h1>
         
 
         <div class="post-meta">
@@ -550,8 +1546,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T22:22:27+08:00">
-                2017-08-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-15T00:00:00+08:00">
+                2016-04-15
               </time>
             
 
@@ -560,6 +1556,39 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/前端开发/" itemprop="url" rel="index">
+                    <span itemprop="name">前端开发</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/前端开发/Javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">Javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -589,941 +1618,17 @@
 
       
         
-          
-            <p>住范儿是由四位清华大学毕业工科男创立，他们之所以拒绝波士顿咨询公司等高薪Offer，而选择“土到渣”的家装行业，在住范儿CEO刘羡然看来，一方面，<strong>家装行业流程长、痛点多、缺乏头部品牌，整体行业和管理水平低下，服务水平有很大提升空间；另一方面，无法很好地满足年轻用户群体个性化的家装需求</strong>。</p>
-<p>作为此次融资领投方，华创资本投资人余跃认为“旧房翻新装修市场”，未来将会是一个巨大的市场；<strong>住范儿的消费群体是拥有自身审美和线上获取信息习惯的群体，在未来十年会成为主流消费人群</strong>；最重要的，住范儿成立不到两年时间，从团队建设到客户服务，再到品牌塑造，从人文到技术两个方面搭建好了一家服务型公司的基础。</p>
-<h4 id="1-从大行业，找准小切口"><a href="#1-从大行业，找准小切口" class="headerlink" title="1. 从大行业，找准小切口"></a>1. 从大行业，找准小切口</h4><p>家装是一个万亿级市场。<strong>根据中国建筑装饰协会的数据，2015年中国建材家居行业市场规模已达到4.16万亿元</strong>。虽然市场存量巨大，但还未产生巨头，主要制约因素是交付和获客难以规模化。<strong>东易日盛是传统家装龙头企业，也仅占市场总规模的0.1%左右</strong>。</p>
-<p><strong>住范儿定位于25-35岁年轻人旧房翻新需求</strong>，提供整体装修和局部装修（厨房、卫生间、墙面换新、地面等）服务项目，其中涉及13个品类，200多种项目。</p>
-<p>旧房翻新主要有<strong>3</strong>个场景：</p>
-<ul>
-<li>出租房翻新</li>
-<li>二手房交易后翻新</li>
-<li>自住宅居住数年后翻新</li>
-</ul>
-<p>其中二手房交易翻新比例最高：数据显示，北京2016年二手房交易量是 27.2万 套，如果其中 70% 需要翻新，平均客单价在 6万 左右，整体市场规模就是 115亿 。加上自住房翻新，预计实际规模在 150-200亿 。</p>
-<h4 id="2-化繁为简，环环相扣"><a href="#2-化繁为简，环环相扣" class="headerlink" title="2. 化繁为简，环环相扣"></a>2. 化繁为简，环环相扣</h4><p>当面对庞大的装修材料市场时，相信每一位装修“小白”都会一脸懵逼。目前市面上涉及家装主材有20种左右，辅材10多种，而每种材料背后都有几十种，甚至上百种品牌。</p>
-<p>为了简化挑选家装材料流程，住范儿在供应链选择上实行两种策略，其一，选择与一线大牌合作，最多合作品牌不超过两家，比如吸油烟机、油漆、地板等；其二，选择与设计师品牌合作，满足用户个性化需求，汲取全球顶尖设计理念和用户沉淀需求，找南方代合作，比如住范儿用于镶嵌浴室黑色花纹的面包砖、黑漆龙头和花洒等都是独家定制款。</p>
-<p>“工期拖延”“偷工减料”“与预算不符”等情况是家装领域被吐槽最多的痛点。对此，住范儿自主研发后台管理系统，从谈单、量房、施工到交付，每一环节都有用户反馈和严格时间管控。哪些流程出现纰漏，一眼可见。</p>
-<p>另外，住范儿服务团队形成小组制，每个小组由客户服务经理、工程服务经理、材料服务经理组成，对于施工质量的把控从工长的招聘开始，选择拥有15年以上施工经验，江苏、安徽等地工人，并对工长每周进行培训。</p>
-<p><strong>今年，住范儿将“人才培养”放在公司发展战略最重要的位置，在刘羡然看来，“ 人才培养大于服务意识，服务意识大于服务流程 ”</strong>。</p>
-<p>对此，住范儿成立了“住范儿学堂”，为入职每一位新人提供行业培训，设置专业包括销售、工程、材料、技术、市场运营等。每个专业设置了四个年级，目前三年级以前的课程备课都已经比较成熟，员工根据在住范儿学堂里的专业和年级同时对应相同的职位。</p>
-<h4 id="3-年轻人更懂年轻人"><a href="#3-年轻人更懂年轻人" class="headerlink" title="3. 年轻人更懂年轻人"></a>3. 年轻人更懂年轻人</h4><p>传统家装巨头东易日盛，伴随“60后”、“70后”购买一手房用户成长壮大；2015年以爱空间为首的互联网家装品牌兴起，实现了家装标准化，出现一大批主打699元/㎡、799元/㎡等家装公司。</p>
-<p>不同以往，住范儿定位于为25-35岁年轻人服务，创始团队是四位“90”后，他们更理解年轻人群的审美品位和生活习惯，可以和年轻人无障碍地沟通交流，更易于达成共识。</p>
-<p>住范儿整体设计风格以简约为主，注重家居颜色搭配，会将全球当季流行色运用设计当中；格局整体设计会考虑年轻人的生活习惯，比如卧室床头柜插孔会用USB插口替代插座；厨房会有一个空间用于放手机或者Ipad，方便年轻人边看视频边做菜等。</p>
-<p>另外，住范儿的产品的名称设置也值得玩味，“颜值革命”“新青年A/B”“大家庭”“小日子”等，相比其他家装公司推出的“北欧风”“田园风”“地中海风”等更符合年轻人的调性。</p>
-<h4 id="4-获客成本是同行业二十分之一"><a href="#4-获客成本是同行业二十分之一" class="headerlink" title="4. 获客成本是同行业二十分之一"></a>4. 获客成本是同行业二十分之一</h4><p>绝大部分人都曾在朋友圈看过关于40㎡小户型、关于北京四合院、关于农村破瓦房、关于深山老林里的无人屋爆款家居改造的文章。住范儿公众账号原始粉丝积累也得益于这些老少皆宜的爆款文章。</p>
-<p>目前，住范儿公众账号粉丝接近60万，平均每篇文章阅读量7-8万，粉丝忠诚度很高，每篇文章的留言甚至比内容还要长。住范儿60%以上客户正是来源于公众平台转化，获客成本不足500元，是行业平均水平的二十分之一。</p>
-<p>住范儿目前已服务过近数千位客户，月流水已经超过1000万，实现微盈利，住范儿在上海的办公室已经布置好，今年年初已进军上海。</p>
-<p>住范儿创始团队从不会量房的装修“小白”，不到两年时间，从大行业中找准小切入口，为特定的人群提供专注的服务，再到供应链搭建、人才体系建设、施工流程控制等，“从人文到技术两个方面搭建好了服务型公司的基础”。</p>
-<p>未来，住范儿如何构建行业壁垒，刘羡然对创业邦说，“对外通过很低获客成本建立一个品牌。对内打通交付流程，提高效率，不断提高用户的满意度。”</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qianmucheng.cn/blog/2017/08/15/土巴兔/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="千木呈">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="千木呈">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2017/08/15/土巴兔/" itemprop="url">土巴兔</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T22:22:16+08:00">
-                2017-08-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p> 我认为创业开始后不久就要有收入，有收入就表明了对客户是有价值的，有人愿意付钱给你买单。虽然开始收入不会多，但是它是有用户价值和商业价值的。因为有人愿意为你买单，是商业成功的根本。—王国彬</p>
+          <blockquote>
+<p>工作中常常会用到很多对数组、字符串的简单重复操作，本文主要根据日常工作遇到的一些情况归纳，总结出一些常用的js方法</p>
 </blockquote>
-<p>最初，土巴兔的商业模式主要聚焦在设计师上，是对设计师有帮助的。比如，一个用户通过土巴兔找到喜欢的装修图片，接着就会找到这个图片是哪个设计师设计的，用户实在喜欢就会付费</p>
-<p>遗憾的是，土巴兔靠设计师这个模式并没有发展起来，土巴兔在这种模式下逐渐遇到了“中国式难题”。为什么一个在风靡美国的商业模式，在我国就行不通呢?因为在我国，消费者普遍有免费获取产品和技术的心理，尤其是对文化创业，消费者普遍不愿意付费。(这可以从我国工艺设计、音像、图书等盗版的猖獗看出来，也可以从360免费杀毒软件的崛起看出来)，这或许是受制于我国目前还没有大量的中产阶级。“我们发现真正愿意付费给设计师的群体规模太小，这很难支撑这个商业价值的实现。”王国彬说</p>
-<p>光靠设计师，在我国的消费结构和消费文化下，是撑不起来的，土巴兔在这上面遇到了发展瓶颈。所以，土巴兔开始从消费者的角度思考商业模式的突破和变革。由于我国主流的装修用户还是找装修公司，而不是直接找设计师。同样，很多装修公司也想找业主。</p>
-<p>　　但这个行业太杂乱了，在家装三大分类中，家居、建材虽然也很乱，品牌集中度也很低，但毕竟还是靠产品说话。但装修行业更乱，更没有太多的标准可言，消费者更是丈二和尚摸不着头脑。我们看到的的是这个行业是非常不规范的，买方和卖方之间信息的不对称也非常严重。所以土巴兔意识到这种刚性需求。<strong>“由于双方都有刚性需求，土巴兔就利用互联网技术撮合他们。让装修公司为用户出一份报价、户型设计方案是举手之劳的，这样一来业主得到了实惠，装修公司通过帮助业主的过程中建立了这种信任感，从而获得了潜在订单的机会。”</strong><br>　　<br>从2011年下半年开始土巴兔就慢慢的变成了一个交易平台。因为只做信息平台，缺乏对行业的深耕，不能保证业主的利益。在装修过程中，经常遇到这样的问题，比如说很多装修公司在给业主做免费户型报价方案的时候很好，但真的签合同拿到钱了，可能没有初始那种好的态度了。而且对装修而言，大多数业主根本就不懂，<strong>所以说做信息平台，只解决了用户找装修公司的痛点，而没有解决装修过程中的痛点</strong>。比如业主找一个装修公司，这个装修公司经营不善倒闭了怎么办?再有，装修公司的施工质量不规范，这时候你说他有问题，他说他没有问题，这时候该怎么办?“所以，遇到这些情况，装修公司的施工质量没办法把关，而业主都不懂，为了解决这个问题，我们就想办法将土巴兔变成一个交易平台。”</p>
-<p>为了保证装修满意后付款，土巴兔建立了自己的监理团队，会对工地进行监督。目前土巴兔的监理团队一部分是自建，另一部分是和第三方合作。要知道监理团队的成本是非常高的，因为那么多业主同时施工，需要雇佣很多的监理人员。所以这就要求土巴兔考虑作为家装行业内的O2O公司，未来可能更多的是考验整体的运营效率尤其是IP系统的各种运作效率。 “我们派出去一个监理，会根据线下装修的地理位置，为他提供路线图。就是说让监理不会走重复的路线，这样我们一个监理就会在一天时间内同时监理几个装修工程，大大提高了效率，也节省了成本。”土巴兔用互联网思维解决了线下监理的成本难题。</p>
-<p>效率，口碑，这是这次采访过程中，王国彬对笔者说到最多的词汇，相比雷军的“专注、极致、口碑、快”，这也许是一种根据自身经验作出的适合自己的概况。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qianmucheng.cn/blog/2017/08/15/Gulp和Webpack/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="千木呈">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="千木呈">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2017/08/15/Gulp和Webpack/" itemprop="url">Gulp和Webpack介绍</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T22:22:08+08:00">
-                2017-08-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="Gulp和Webpack是什么"><a href="#Gulp和Webpack是什么" class="headerlink" title="Gulp和Webpack是什么"></a>Gulp和Webpack是什么</h4><p>首先可以从gulp和webpack的官网找到对它们的描述：</p>
-<blockquote>
-<p>gulp: 用自动化构建工具增强你的工作流程</p>
-<p>Webpack: 当下最热门的前端资源模块化管理和打包工具</p>
-</blockquote>
-<p>它们都属于前端构建工具，但gulp是任务管理工具（task runner），webpack是模块化打包工具（module bundler）。</p>
-<h4 id="任务管理工具"><a href="#任务管理工具" class="headerlink" title="任务管理工具"></a>任务管理工具</h4><p>任务管理工具中我们可以声明若干任务，比如合并、压缩、测试等等。任务间可互相依赖，可以是同步，也可以是异步的。然后我们可以自由地选择运行哪个任务，任务管理工具会帮我们运行它（以及它的依赖）。</p>
-<p>使用gulp可以配置各种插件来做css或js文件的合并压缩、编译sass或less、添加兼容性前缀（-webkit-, -moz- …）、自动刷新浏览器等等，它能替代手工实现自动化工作、优化前端工作流程。</p>
-<h4 id="模块化打包工具"><a href="#模块化打包工具" class="headerlink" title="模块化打包工具"></a>模块化打包工具</h4><p>javascript本身并不支持模块化(<strong>ES6支持模块化</strong>)，但对于浏览器中的js和服务端的nodejs，它们运行环境是不同的，并且各自遵循某种规范，那么该如何实现js的模块化呢？</p>
-<p>目前有两种主流方案：</p>
-<ol>
-<li><p>在线编译模块化<br>如seajs和requirejs模块框架，相当于在页面上加载一个CMD/AMD解释器，这样浏览器就认识了define、exports、module这些东西，也就实现了模块化。</p>
-</li>
-<li><p>预编译模块化<br>webpack和browserify它们是一个预编译模块的方案，它们遵循了不需要在浏览器中加载解释器。在本地直接写js，不管是AMD/CMD/ES6风格的模块化，它都能识别并编译成浏览器认识的js。</p>
-</li>
-</ol>
-<p>最初Webpack就是为前端js代码打包而设计的，后来被扩展到其他资源（图片、css文件等）的打包处理。Webpack具有grunt、gulp对于静态资源自动化构建的能力，更重要的是，webpack弥补了requirejs在模块化方面的缺陷，同时兼容AMD与CMD的模块加载规范，具有更强大的js模块化的功能。</p>
-<p><img src="http://on2171g4d.bkt.clouddn.com/fetoolsabc.jpg" alt=""></p>
-<blockquote>
-<p>webpack is a module bundler. webpack takes modules with dependencies and generates static assets representing those modules.</p>
-</blockquote>
-<p>对了，你完全可以gulp搭配webpack来使用，gulp相对来说更灵活，可以做更多的定制化任务，而Webpack更侧重于模块打包。</p>
-<h4 id="整合Gulp-amp-Webpack"><a href="#整合Gulp-amp-Webpack" class="headerlink" title="整合Gulp&amp;Webpack"></a>整合Gulp&amp;Webpack</h4><p>可以在Gulp中使用webpack-stream，首先需要安装一下需要的模块：</p>
-<p>npm install gulp webpack-stream vinyl-named –save-dev</p>
-<p>然后在 gulpfile.js 中进行配置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var gulp = require(&apos;gulp&apos;);</div><div class="line">var webpack = require(&apos;webpack-stream&apos;);</div><div class="line">var named = require(&apos;vinyl-named&apos;);</div><div class="line">var webpackConfig = require(&quot;./webpack.config.js&quot;);</div><div class="line"></div><div class="line">gulp.task(&apos;webpack&apos;, function() &#123;</div><div class="line">  return gulp.src(&apos;./src/app.js&apos;)</div><div class="line">    .pipe(named())</div><div class="line">    .pipe(webpack(webpackConfig))</div><div class="line">    .pipe(gulp.dest(&apos;./dist/&apos;));</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>使用 vinyl-named 保持输入和输出的文件名一致, 否则文件名会由webpack打包后自动生成一个hash。</p>
-<p>不过这个方案貌似有弊端：</p>
-<blockquote>
-<p>使用webpack-stream虽然可以很方便的将webpack整合到gulp中，但是有致命的问题存在：如果关闭webpack的监听模式，那么每次文件变动就会全量编译JS/CSS文件，非常耗时。 如果打开webpack的监听模式，那么会阻塞其他gulp任务，导致其他gulp任务的监听失效。 所以这种方案几乎不可用！——《gulp &amp; webpack整合，鱼与熊掌我都要！》</p>
-</blockquote>
-<p>所以还是建议用webpack原生方案。</p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>现在的前端开发领域融合了很多后端工程化的思想，很多产品从网页进化成了Web app，它通常是一个单页应用(SPA)，每个页面都通过异步的方式加载，这就会导致大量的代码存在于 client side ，并且前端开发是多语言、多层次的开发工作，各种资源以增量更新的方式加载到浏览器，为了更好的组织这些代码和资源，并且保证它们在浏览器端快速、优雅的加载和更新，便出现了任务管理工具和模块化打包工具。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qianmucheng.cn/blog/2017/08/15/AMD和CommonJS/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="千木呈">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="千木呈">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2017/08/15/AMD和CommonJS/" itemprop="url">AMD和CommonJS规范</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T22:21:57+08:00">
-                2017-08-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="CommonJS"><a href="#CommonJS" class="headerlink" title="CommonJS"></a>CommonJS</h4><p>2009年，美国程序员Ryan Dahl创造了nodejs项目，将javascript语言用于服务器端编程。<br><img src="http://image.beekka.com/blog/201210/bg2012103002.jpg" alt=""><br>这标志”javascript模块化编程”正式诞生。因为老实说，在浏览器环境下，没有模块也不是特别大的问题，毕竟网页程序的复杂性有限；但是在服务器端，一定要有模块，于操作系统和其他应用程序互动，否则根本没法编程。</p>
-<p>nodejs的模块系统，就是参照CommonJS规范实现的。在CommonJS中，有一个全局性的方法require()，用于加载模块。假定有一个数学模块math.js，就可以想下面这样加载。</p>
-<pre><code>var math = require(&apos;math&apos;)
-</code></pre><p>然后，就可以调用模块提供的方法</p>
-<pre><code>var math = require(&apos;math&apos;);
-math.add(2, 3);
-</code></pre><p>因为这个系列主要针对浏览器编程，不涉及node.js，所有对CommonJS就不多做介绍了。我们在这里只要知道，require()用于加载模块就行了。</p>
-<h2 id="浏览器环境"><a href="#浏览器环境" class="headerlink" title="浏览器环境"></a>浏览器环境</h2><p>有了服务器端模块以后，很自然地，大家就想要客户端模块。而且最好两者能够兼容，一个模块不用修改，在服务器和浏览器都可以运行。</p>
-<p>但是，由于一个重大的局限，使得CommonJS规范不适用浏览器环境。还是上一节的代码，如果在浏览器中运行，会有一个很大的问题</p>
-<pre><code>var math = require(&apos;math&apos;);
-math.add(2, 3);
-</code></pre><p>第二行math(2, 3)，在第一行执行之后运行，因此必须等待math.js加载完成。也就是说，如果加载时间很长，整个应用就会停在那里等。</p>
-<p>这对服务器端不是一个问题，因为所有的模块都存放在本地硬盘，可以同步加载完成，等待时间就是硬盘的读取时间。但是，对于浏览器，这却是一个大问题，因为模块都放在服务器端，等待时间取决于网速的快慢，可能要等很长时间，浏览器处于“假死”状态。</p>
-<p>因此，浏览器端的模块，不能采用“同步加载”(synchronous)，只能采用“异步加载”(asyncronous)。这就是AMD规范诞生的背景。</p>
-<h4 id="AMD"><a href="#AMD" class="headerlink" title="AMD"></a>AMD</h4><p>AMD是”Asynchronous Module Definition”的缩写，意思就是”异步模块定义”。它采用异步方式加载模块，模块的加载不影响它后面语句的运行。所有依赖这个模块的语句，都定义在一个回调函数中，等到加载完成之后，这个回调函数才会运行。</p>
-<p>AMD也采用require()语句加载模块，但是不同于CommonJS，它要求两个参数：</p>
-<pre><code>require([module], callback);
-</code></pre><p>第一个参数[module]，是一个数组，里面的成员就是要加载的模块；第二个参数callback，则是加载成功之后的回调函数。如果将前面的代码改写成AMD形式，就是下面这样：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">require([&apos;math&apos;], function (math) &#123;</div><div class="line">    math.add(2, 3);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>math.add()与math模块加载不是同步的，浏览器不会发生假死。所以很显然，AMD比较适合浏览器环境。</p>
-<p>目前，主要有两个Javascript库实现了AMD规范：require.js和curl.js。本系列的第三部分，将通过介绍require.js，进一步讲解AMD的用法，以及如何将模块化编程投入实战。</p>
-<h4 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h4><p>CMD(Common Module Definition)规范和AMD很相似，尽量保持简单，并与CommonJS和Node.js的 Modules 规范保持了很大的兼容性。在CMD规范中，一个模块就是一个文件，代码的书写格式如下：</p>
-<pre><code>define(factory);
-</code></pre><p>factory 为函数时，表示是模块的构造方法。执行该构造方法，可以得到模块向外提供的接口。factory 方法在执行时，默认会传入三个参数：require、exports 和 module：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">define(function(require, exports, module) &#123;    </div><div class="line"></div><div class="line">  // 模块代码  </div><div class="line"></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>示例代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">//a.js  一个文件就是一个模块</div><div class="line"></div><div class="line">define(function(require, exports, module) &#123;   </div><div class="line">  exports.getTime = function() &#123;   </div><div class="line">    return new Date();   </div><div class="line">  &#125;  </div><div class="line">&#125;);</div><div class="line"></div><div class="line"></div><div class="line">/* main.js */</div><div class="line"></div><div class="line">define(function(require, exports, module) &#123; </div><div class="line"></div><div class="line">  /* 按需加载a.js */ </div><div class="line">  var a = require(&apos;./a&apos;);    </div><div class="line">  </div><div class="line">  console.log(a.getTime());  </div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h4 id="AMD与CMD的比较"><a href="#AMD与CMD的比较" class="headerlink" title="AMD与CMD的比较"></a>AMD与CMD的比较</h4><p>AMD：依赖前置，预执行（异步加载：依赖先执行）。CMD：依赖就近，懒（延迟）执行（运行到需加载，根据顺序执行）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">// CMD define(function(require, exports, module) &#123;  </div><div class="line"></div><div class="line">  var a = require(&apos;./a&apos;)  </div><div class="line"></div><div class="line">  a.doSomething();  </div><div class="line"></div><div class="line">  // 省略1万行 </div><div class="line"></div><div class="line">  var b = require(&apos;./b&apos;) // 依赖可以就近书写  </div><div class="line"></div><div class="line">  b.doSomething();</div><div class="line"></div><div class="line">&#125;) // AMD 默认推荐的是 define([&apos;./a&apos;, &apos;./b&apos;], function(a, b) &#123; // 依赖必须一开始就写好  </div><div class="line"></div><div class="line">  a.doSomething();  </div><div class="line"></div><div class="line">  // 省略1万行  </div><div class="line"></div><div class="line">  b.doSomething();</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qianmucheng.cn/blog/2017/08/15/XSS攻击总结/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="千木呈">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="千木呈">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2017/08/15/XSS攻击总结/" itemprop="url">XXS攻击总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T22:21:49+08:00">
-                2017-08-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="XSS的类型"><a href="#XSS的类型" class="headerlink" title="XSS的类型"></a>XSS的类型</h4><p>总体来讲，XSS分三类，存储型XSS、反射型XSS、DOM-XSS。</p>
-<h5 id="存储型XSS"><a href="#存储型XSS" class="headerlink" title="存储型XSS"></a>存储型XSS</h5><p>数据库中存有的存在XSS攻击的数据，返回给客户端。若数据未经过任何转义。被浏览器渲染，就可能导致XSS攻击。</p>
-<h3 id="反射型XSS"><a href="#反射型XSS" class="headerlink" title="反射型XSS"></a>反射型XSS</h3><p>将用户输入的存在XSS攻击的数据，发送给后台，后台并未对数据进行存储，也未经过任何过滤，直接返回给客户端，被浏览器渲染，就可能导致XSS攻击。</p>
-<h5 id="DOM-XSS"><a href="#DOM-XSS" class="headerlink" title="DOM-XSS"></a>DOM-XSS</h5><p>纯粹发生在客户端的XSS攻击，比如：</p>
-<blockquote>
-<p><a href="http://www.some.site/page.html?default=French" target="_blank" rel="external">http://www.some.site/page.html?default=French</a></p>
-</blockquote>
-<p>页面代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Select your language:</div><div class="line">&lt;select&gt;</div><div class="line">    &lt;script&gt; </div><div class="line">        document.write(&quot;&lt;OPTION value=1&gt;&quot;+document.location.href.substring(document.location.href.indexOf(&quot;default=&quot;)+8)+&quot;&lt;/OPTION&gt;&quot;);  </div><div class="line">        document.write(&quot;&lt;OPTION value=2&gt;English&lt;/OPTION&gt;&quot;);    </div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/select&gt;</div></pre></td></tr></table></figure>
-<p><strong>该XSS攻击实现条件：</strong></p>
-<p>1、用户点击了如下链接<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://www.some.site/page.html?default=&lt;script&gt;alert(document.cookie)&lt;/script&gt;</div></pre></td></tr></table></figure></p>
-<p>2、后台对URL参数没有做任何处理，返回给客户端，前端直接从URL上获取参数</p>
-<p>3、打开网址的浏览器是低版本的，常见IE8以下</p>
-<p>满足以上三者，就会导致URL上的js代码执行，但是攻击者可以利用这个，做你无法想象的事情。在现在浏览器中，已经做了XSS过滤，一旦检测到xss，会提示报错，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">The XSS Auditor refused to execute a script in &apos;file:///C:/Users/summerhxji/Desktop/taobao/xss.html?default=%3Cscript%3Ealert(document.cookie)%3C/script%3E&apos; because its source code was found within the request. The auditor was enabled as the server did not send an &apos;X-XSS-Protection&apos; header.</div><div class="line">(anonymous) @ xss.html?default=&lt;script&gt;alert(document.cookie)&lt;/script&gt;</div></pre></td></tr></table></figure>
-<h4 id="XSS防御（输入输出的过滤和数据转义）"><a href="#XSS防御（输入输出的过滤和数据转义）" class="headerlink" title="XSS防御（输入输出的过滤和数据转义）"></a>XSS防御（输入输出的过滤和数据转义）</h4><h5 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h5><p>客户端参数：包括用户输入、URL参数、POST参数</p>
-<ol>
-<li>在产品形态上，针对不同输入类型，对输入做变量类型限制。<br>如，<a href="http://xss.qq.com?default=12，Default值强制限制为整形。" target="_blank" rel="external">http://xss.qq.com?default=12，Default值强制限制为整形。</a><br>我们的后台是node，使用joi对于输入做类型限制：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">const &#123; default &#125; = req.body;</div><div class="line">const schema = Joi.number().required();</div><div class="line">const result = schema.validate(default);</div><div class="line">if(result.error) &#123;</div><div class="line">....</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ol>
-<li>字符串类型的数据，需要针对&lt;、&gt;、/、’、”、&amp;六个字符进行实体化转义</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>特殊符</th>
-<th>实体编码</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>&amp;</td>
-<td>&amp;</td>
-</tr>
-<tr>
-<td>&lt;</td>
-<td>&lt;</td>
-</tr>
-<tr>
-<td>&gt;</td>
-<td>&gt;</td>
-</tr>
-<tr>
-<td>“</td>
-<td>&quot;</td>
-</tr>
-<tr>
-<td>‘</td>
-<td>&#x27;</td>
-</tr>
-<tr>
-<td>/</td>
-<td>&#x2F;</td>
-</tr>
-</tbody>
-</table>
-<h5 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h5><p>即使在客户端对用户的输入做了过滤、转义，攻击者一样可能，通过截包，转发等手段，修改你的请求包体。最终还是要在数据输出的时候做数据转义。</p>
-<p>好啦，到数据转义啦，不就是对&lt;&gt;,’&amp;”这些字符做实体化转义吗？如果你认为这么简单，NO NO NO…因为浏览器解析中html和js编码不一样，以及上下文场景多样，所以对于后台输出的变量，不同的上下文中渲染后端变量，转码不一样。</p>
-<p>下面的HTML片段显示了如何安全地在多种不同的上下文中渲染不可信数据</p>
-<p><img src="http://mmbiz.qpic.cn/mmbiz_png/kn3fIZB16MoQzibiavf1PWI4cCd9p4nJs2ACPO5crXZ7gGDeeoutB0E2Dsh6kDgQHWpyLqkWAPpGcodWxaDfM2EA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt=""></p>
-<p>所有输出的数据转义都应该遵守上表的规则，而针对同步数据和异步数据，有较大的使用区别做了区分：</p>
-<ol>
-<li><p>同步数据<br>a. React页面主动屏蔽掉XSS，非react则需要对不可信任数据，要进行输出转义。<br>b. 对于html白名单需求，可以使用SanitizeHelper模块提供了一个方法集合来处理非预期的HTML元素。<br>c. 不同的使用方式，编码方式不同，java现成的工具可以用——ESAPI，不同位置如何转义可参照ESAPI文档，比如属性值转义：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">String safe = ESAPI.encoder().encodeForHTMLAttribute( </div><div class="line">request.getParameter( &quot;input&quot; ) );</div></pre></td></tr></table></figure>
-</li>
-<li><p>异步、后台直出给js使用的json数据<br>对于不可信任的json数据。因为json数据可能用到不同的地方，所以转义可以放在前端js去转义。<br>a. 参与运算的动态变量，最好转化为对应类型后再运算。如number型.<br>b. 如果是字符串操作，保证字符串被引号包裹。<br>c. 不能使用eval ，new fuction，settimeout执行动态字符串，因为这个字符串很可能就是一个xss代码，如果无法避免，那么也要转义之后再参与运算。<br>d. 输出到页面上的数据必须使用相应方法转义，前端可以考虑寻找js插件处理。目前jquery-encoder，可用于前端json转义。使用方式与ESAPI类似，在需要渲染的时候进行转义。</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qianmucheng.cn/blog/2017/08/15/跨域问题总结/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="千木呈">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="千木呈">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2017/08/15/跨域问题总结/" itemprop="url">跨域问题总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T22:21:36+08:00">
-                2017-08-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="什么是跨域？"><a href="#什么是跨域？" class="headerlink" title="什么是跨域？"></a>什么是跨域？</h4><p>同源策略是由Netscape提出的著名安全策略，是浏览器最核心、基本的安全功能,它限制了一个源(origin)中加载文本或者脚本与来自其他源(origin)中资源的交互方式，所谓的同源就是指协议、域名、端口相同。当浏览器执行一个脚本时会检查是否同源，只有同源的脚本才会执行，如果不同源即为跨域</p>
-<h2 id="跨域的几种方式"><a href="#跨域的几种方式" class="headerlink" title="跨域的几种方式"></a>跨域的几种方式</h2><p>在项目中可能会需要在一个域名下请求另外一个域名的资源，下面我们来探讨下跨域的几种实现方式</p>
-<h5 id="1-jsonp"><a href="#1-jsonp" class="headerlink" title="1.jsonp"></a>1.jsonp</h5><p>最常见的一种跨域方式，其背后原理就是利用了script标签不受同源策略的限制，在页面中动态插入了script，script标签的src属性就是后端api接口的地址，并且以get的方式将前端回调处理函数名称告诉后端，后端在响应请求时会将回调返还，并且将数据以参数的形式传递回去。</p>
-<p>前端</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">//http://127.0.0.1:8888/jsonp.html</div><div class="line">var script = document.createElement(&apos;script&apos;);</div><div class="line">      script.src = &apos;http://127.0.0.1:2333/jsonpHandler?callback=_callback&apos;</div><div class="line">      document.body.appendChild(script);      //插入script标签</div><div class="line">      //回调处理函数 _callback</div><div class="line">      var _callback = function(obj)&#123;</div><div class="line">          for(key in obj)&#123;</div><div class="line">            console.log(&apos;key: &apos; + key +&apos; value: &apos; + obj[key]);</div><div class="line">          &#125;</div><div class="line">      &#125;</div></pre></td></tr></table></figure>
-<p>后端</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">//http://127.0.0.1:2333/jsonpHandler</div><div class="line">app.get(&apos;/jsonpHandler&apos;, (req,res) =&gt; &#123;</div><div class="line">  let callback = req.query.callback;</div><div class="line">  let obj = &#123;</div><div class="line">    type : &apos;jsonp&apos;,</div><div class="line">    name : &apos;weapon-x&apos;</div><div class="line">  &#125;;</div><div class="line">  res.writeHead(200, &#123;&quot;Content-Type&quot;: &quot;text/javascript&quot;&#125;);</div><div class="line">  res.end(callback + &apos;(&apos; + JSON.stringify(obj) + &apos;)&apos;);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h5 id="2-CORS"><a href="#2-CORS" class="headerlink" title="2. CORS"></a>2. CORS</h5><p>Cross-Origin Resource Sharing(跨域资源共享)是一种允许当前域（origin）的资源（比如html/js/web service）被其他域（origin）的脚本请求访问的机制。当使用XMLHttpRequest发送请求时，浏览器如果发现违反了同源策略就会自动加上一个请求头:origin,后端在接受到请求后确定响应后会在Response Headers中加入一个属性:Access-Control-Allow-Origin,值就是发起请求的源地址(<a href="http://127.0.0.1:8888)，浏览器得到响应会进行判断Access-Control-Allow-Origin的值是否和当前的地址相同，只有匹配成功后才进行响应处理。" target="_blank" rel="external">http://127.0.0.1:8888)，浏览器得到响应会进行判断Access-Control-Allow-Origin的值是否和当前的地址相同，只有匹配成功后才进行响应处理。</a></p>
-<p>现代浏览器中和移动端都支持CORS（除了opera mini），IE下需要8+</p>
-<p>前端</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">//http://127.0.0.1:8888/cors.html</div><div class="line">var xhr = new XMLHttpRequest();</div><div class="line">xhr.onload = function(data)&#123;</div><div class="line">  var _data = JSON.parse(data.target.responseText)</div><div class="line">  for(key in _data)&#123;</div><div class="line">    console.log(&apos;key: &apos; + key +&apos; value: &apos; + _data[key]);</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line">xhr.open(&apos;POST&apos;,&apos;http://127.0.0.1:2333/cors&apos;,true);</div><div class="line">xhr.setRequestHeader(&apos;Content-Type&apos;,&apos;application/x-www-form-urlencoded&apos;);</div><div class="line">xhr.send();</div></pre></td></tr></table></figure>
-<p>后端</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">//http://127.0.0.1:2333/cors</div><div class="line">app.post(&apos;/cors&apos;,(req,res) =&gt; &#123;</div><div class="line">  if(req.headers.origin)&#123;</div><div class="line">    res.writeHead(200,&#123;</div><div class="line">      &quot;Content-Type&quot;: &quot;text/html; charset=UTF-8&quot;,</div><div class="line">      &quot;Access-Control-Allow-Origin&quot;:&apos;http://127.0.0.1:8888&apos;</div><div class="line">    &#125;);</div><div class="line">    let people = &#123;</div><div class="line">      type : &apos;cors&apos;,</div><div class="line">      name : &apos;weapon-x&apos;</div><div class="line">    &#125;</div><div class="line">    res.end(JSON.stringify(people));</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h5 id="3-服务器跨域"><a href="#3-服务器跨域" class="headerlink" title="3. 服务器跨域"></a>3. 服务器跨域</h5><p>在前后端分离的项目中可以借助服务器实现跨域，具体做法是：前端向本地服务器发送请求，本地服务器代替前端再向api服务器接口发送请求进行服务器间通信，本地服务器其实就是个中转站的角色，再将响应的数据返回给前端，下面用node.js做一个示例</p>
-<p>前端</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">//http://127.0.0.1:8888/server</div><div class="line">var xhr = new XMLHttpRequest();</div><div class="line">    xhr.onload = function(data)&#123;</div><div class="line">      var _data = JSON.parse(data.target.responseText)</div><div class="line">      for(key in _data)&#123;</div><div class="line">        console.log(&apos;key: &apos; + key +&apos; value: &apos; + _data[key]);</div><div class="line">      &#125;</div><div class="line">    &#125;;</div><div class="line">    xhr.open(&apos;POST&apos;,&apos;http://127.0.0.1:8888/feXhr&apos;,true);  //向本地服务器发送请求   </div><div class="line">    xhr.setRequestHeader(&apos;Content-Type&apos;,&apos;application/x-www-form-urlencoded&apos;);</div><div class="line">    xhr.send(&quot;url=http://127.0.0.1:2333/beXhr&quot;);    //以参数形式告知需要请求的后端接口</div></pre></td></tr></table></figure>
-<p>后端</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">//http://127.0.0.1:8888/feXhr</div><div class="line">app.post(&apos;/feXhr&apos;,(req,res) =&gt; &#123;</div><div class="line">  let url  = req.body.url;</div><div class="line">  superagent.get(url)           //使用superagent想api接口发送请求</div><div class="line">      .end(function (err,docs) &#123;</div><div class="line">          if(err)&#123;</div><div class="line">              console.log(err);</div><div class="line">              return</div><div class="line">          &#125;</div><div class="line">          res.end(docs.res.text); //返回到前端</div><div class="line">      &#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line">//http://127.0.0.1:2333/beXhr</div><div class="line">app.get(&apos;/beXhr&apos;,(req,res) =&gt; &#123;</div><div class="line">  let obj = &#123;</div><div class="line">    type : &apos;superagent&apos;,</div><div class="line">    name : &apos;weapon-x&apos;</div><div class="line">  &#125;;</div><div class="line">  res.writeHead(200, &#123;&quot;Content-Type&quot;: &quot;text/javascript&quot;&#125;);</div><div class="line">  res.end(JSON.stringify(obj));     //响应</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h5 id="4-Nginx反向代理"><a href="#4-Nginx反向代理" class="headerlink" title="4. Nginx反向代理"></a>4. Nginx反向代理</h5><p>Nginx反向代理的思路，就是通过Nginx解析URL地址的时候进行判断，将请求转发的具体的服务器上</p>
-<ul>
-<li><p>自定义本地的url请求规则 ，如 www.720ui.com/blog 则对应要nginx服务转发到 blog.720ui.com 。</p>
-</li>
-<li><p>配置 nginx.conf 文件，将本地带有特定前缀的URL接口请求转发到要跨域的真实物理服务器上。</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">server </div><div class="line">&#123;</div><div class="line">    listen: 80;</div><div class="line">    server_name www.test.com</div><div class="line">    </div><div class="line">    location ^~ /blog/ &#123;</div><div class="line">        proxy_pass http://blog.test.com/;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>Nginx服务转发请求到真实物理服务器。Nginx服务将真实物理服务器传回的数据转发给web端</li>
-</ul>
-<h5 id="5-postmessage跨域"><a href="#5-postmessage跨域" class="headerlink" title="5. postmessage跨域"></a>5. postmessage跨域</h5><p>在HTML5中新增了postMessage方法，postMessage可以实现跨文档消息传输（cross document messaging），该方法可以通过绑定window的message时间来监听发送跨文档消息传输内容。使用postMessage实现跨域的话原理就类似于jsonp，动态插入iframe标签，再从iframe里面拿回数据，私认为用作跨页面通信更加适合。</p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>当然还有其他实现跨域的方式，以上是一些常用的跨域方案，各有利弊，比如：jsonp只能发送get请求、cors会忽略cookie、服务器跨域需要另起服务器等等，大家可以根据自己项目需求选择合适的解决方案。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://qianmucheng.cn/blog/2017/08/15/移动端rem布局详解/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="千木呈">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="千木呈">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2017/08/15/移动端rem布局详解/" itemprop="url">移动端rem布局详解</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T22:16:31+08:00">
-                2017-08-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="1-rem是什么"><a href="#1-rem是什么" class="headerlink" title="1. rem是什么"></a>1. rem是什么</h4><blockquote>
-<p>rem（font size of the root element）是指相对于根元素的字体大小的单位。简单的说它就是一个相对单位。rem计算的规则是依赖根元素。</p>
-</blockquote>
-<hr>
-<h4 id="2-基本写法"><a href="#2-基本写法" class="headerlink" title="2. 基本写法"></a>2. 基本写法</h4><p>如下面定于的html的节点</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">html</span> &#123;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">10px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.sonDom</span> &#123;</div><div class="line">    width: 6rem; //相当于6*10=60px</div><div class="line">    height: 3rem; //相当于3*10=30px</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>通过上面分析，我们可以得出<strong>可以通过</strong>改变html的font-size的值而等比改变所有用了rem单位的元素，而这个正是rem实现完美的分辨率适配的原理。</p>
-<hr>
-<h4 id="3-如何动态更改根元素font-size的值"><a href="#3-如何动态更改根元素font-size的值" class="headerlink" title="3. 如何动态更改根元素font-size的值"></a>3. 如何动态更改根元素font-size的值</h4><p>为了实现分辨率适配，我们需要用根据屏幕的大小动态去计算根元素的font-size的值，目前普遍的有两种方法：</p>
-<h6 id="1、通过媒体查询的方式，能够满足大部分场景，只需要把常用的屏宽度考虑进去即可"><a href="#1、通过媒体查询的方式，能够满足大部分场景，只需要把常用的屏宽度考虑进去即可" class="headerlink" title="1、通过媒体查询的方式，能够满足大部分场景，只需要把常用的屏宽度考虑进去即可"></a>1、通过媒体查询的方式，能够满足大部分场景，只需要把常用的屏宽度考虑进去即可</h6><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*默认为20px*/</span></div><div class="line"> <span class="selector-tag">html</span> &#123;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">20px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/*根据宽度设置不同的html font-size值去覆盖默认值*/</span></div><div class="line">@<span class="keyword">media</span> only screen and (min-width: <span class="number">320px</span>;)&#123;</div><div class="line">    html &#123;</div><div class="line">      <span class="selector-tag">font-size</span>: 10<span class="selector-tag">px</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@<span class="keyword">media</span> only screen and (min-width: <span class="number">375px</span>;)&#123;</div><div class="line">    html &#123;</div><div class="line">      <span class="selector-tag">font-size</span>: 16<span class="selector-tag">px</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@<span class="keyword">media</span> only screen and (min-width: <span class="number">414px</span>;)&#123;</div><div class="line">    html &#123;</div><div class="line">      <span class="selector-tag">font-size</span>: 20<span class="selector-tag">px</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h6 id="2、通过js设置"><a href="#2、通过js设置" class="headerlink" title="2、通过js设置"></a>2、通过js设置</h6><p>如果希望把所有屏幕大小给考虑进去，可以考虑使用js来计算，如下面的代码</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> doc = <span class="built_in">document</span>, </div><div class="line">    win = <span class="built_in">window</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">initFontSize</span> (<span class="params"></span>) </span>&#123;</div><div class="line">     <span class="keyword">var</span> docEl = doc.documentElement,</div><div class="line">         resizeEvt = <span class="string">'orientationchange'</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">'orientationchange'</span> : <span class="string">'resize'</span>,</div><div class="line">         recalc = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">             <span class="keyword">var</span> clientWidth = docEl.clientWidth; <span class="comment">//window.innerWidth;</span></div><div class="line">             <span class="keyword">if</span>(!clientWidth) <span class="keyword">return</span>;</div><div class="line">             fontSizeRate = (clientWidth / <span class="number">375</span>)</div><div class="line">             <span class="keyword">var</span> baseFontSize = <span class="number">15</span> * fontSizeRate;</div><div class="line">             docEl.style.fontSize = baseFontSize + <span class="string">'px'</span>;</div><div class="line">         &#125;;</div><div class="line">     recalc();</div><div class="line">     <span class="keyword">if</span>(!doc.addEventListener) <span class="keyword">return</span>;</div><div class="line">     win.addEventListener(resizeEvt, recalc, <span class="literal">false</span>);</div><div class="line">     doc.addEventListener(<span class="string">'DOMContentLoaded'</span>, recalc, <span class="literal">false</span>);  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<hr>
-<h4 id="4-rem换算"><a href="#4-rem换算" class="headerlink" title="4. rem换算"></a>4. rem换算</h4><p>我们在开发的时候，往往不希望涉及到rem的换算，如一个设计稿按钮是120px，如果我们根节点font-size是14px，计算 120/14=8.571rem。感觉还是挺麻烦得，而这些工作是可以通过sass等预处理器或者构建去完成。</p>
-<p>如下面翔神写的fis插件<br><a href="https://github.com/imweb/fis-parser-rem" target="_blank" rel="external">https://github.com/imweb/fis-parser-rem</a></p>
-<hr>
-<h4 id="5-效果图"><a href="#5-效果图" class="headerlink" title="5. 效果图"></a>5. 效果图</h4><p><img src="http://7tszky.com1.z0.glb.clouddn.com/FjkuDS8oQb1ayRLMaciFCZWtViHH" alt="效果图"></p>
-<hr>
-<h4 id="6-rem需注意点"><a href="#6-rem需注意点" class="headerlink" title="6.rem需注意点"></a>6.rem需注意点</h4><p>在移动端使用rem的话，兼容性是没问题的，但还是存在着一些需要注意的地方：</p>
-<h6 id="1、小数数值处理"><a href="#1、小数数值处理" class="headerlink" title="1、小数数值处理"></a>1、小数数值处理</h6><p>不同浏览器计算rem转换为px数值时，对于小数点后的数值的处理是有所偏差，rem计算偏差的根源是浏览器内核数字类型的区别，如果浏览器的内核数字类型是float类型，能够较好地支持有小数点的数值。当浏览器内核数字类型是int类型，不支持小数点，会对数字进行四舍五入，这样就会有偏差。如果元素越大偏差得就越明显！</p>
-<h6 id="2、雪碧图rem"><a href="#2、雪碧图rem" class="headerlink" title="2、雪碧图rem"></a>2、雪碧图rem</h6><p>使用rem的同时又涉及到雪碧图时，由上面我们可以得知，rem的换算成px的尺寸非严格精确尺寸，如果雪碧图如果图标之间的距离过小，就可能导致图标过界，因此图与图之间的间隙需要留相应大一点。</p>
-<h6 id="3、单纯的rem没解决高度适配的问题"><a href="#3、单纯的rem没解决高度适配的问题" class="headerlink" title="3、单纯的rem没解决高度适配的问题"></a>3、单纯的rem没解决高度适配的问题</h6><p>单纯的rem没解决高度适配的问题，当然目前也没有特别多高度适配的场景，因此建议如果需要在使用rem基础上还做相应的高度适配，就要通过相应的js去辅助啦。</p>
-
-          
+<h4 id="1-字符串操作"><a href="#1-字符串操作" class="headerlink" title="1. 字符串操作"></a>1. 字符串操作</h4><h5 id="1-1-去除字符串空格"><a href="#1-1-去除字符串空格" class="headerlink" title="1-1 去除字符串空格"></a>1-1 去除字符串空格</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//去除空格 type 1-所有空格  2-前后空格  3-前空格  4-后空格</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">trim</span>(<span class="params">str, type</span>) </span>&#123;</div><div class="line">    <span class="keyword">switch</span> (type) &#123;</div><div class="line">        <span class="keyword">case</span> <span class="number">1</span>: <span class="keyword">return</span> str.replace(<span class="regexp">/\s+/g</span>, <span class="string">""</span>);</div><div class="line">        <span class="keyword">case</span> <span class="number">2</span>: <span class="keyword">return</span> str.replace(<span class="regexp">/(^\s*)|(\s*$)/g</span>, <span class="string">""</span>);</div><div class="line">        <span class="keyword">case</span> <span class="number">3</span>: <span class="keyword">return</span> str.replace(<span class="regexp">/(^\s*)/g</span>, <span class="string">""</span>);</div><div class="line">        <span class="keyword">case</span> <span class="number">4</span>: <span class="keyword">return</span> str.replace(<span class="regexp">/(\s*$)/g</span>, <span class="string">""</span>);</div><div class="line">        <span class="keyword">default</span>: <span class="keyword">return</span> str;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/blog/2016/04/15/js常用实例的实现/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1602,7 +1707,7 @@ math.add(2, 3);
 
           
             <div class="site-state-item site-state-posts">
-              <a href="/blog/archives/">
+              <a href="/blog/">
                 <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">日志</span>
               </a>
@@ -1610,7 +1715,25 @@ math.add(2, 3);
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/blog/categories/index.html">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/blog/tags/index.html">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
@@ -1748,6 +1871,8 @@ math.add(2, 3);
   
 
 
+  
+
 
 
 
@@ -1775,6 +1900,9 @@ math.add(2, 3);
 
   
   <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   
